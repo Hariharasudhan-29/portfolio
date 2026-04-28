@@ -1,0 +1,60 @@
+HARIHARASUDHAN V 
+Aspiring Software Developer 
++91 9150742320 | hariharasudhanvelmurugan@gmail.com | Madurai, TN linkedin.com/in/hariharasudhan-it | github.com/Hariharasudhan-29 
+ 
+PROFESSIONAL SUMMARY 
+Driven and detail-oriented Information Technology student with a strong foundation in C++, Java, Python, and modern web development. Experienced in building full-stack applications and IoT solutions through hands-on project work. A quick learner focused on writing clean, efficient code, seeking an entry-level software developer role to apply technical skills and contribute to a forward-thinking team. 
+ 
+EDUCATION 
+SRM Madurai College for Engineering and Technology | Madurai, TN Bachelor of Technology in Information Technology | Expected 2027 CGPA: 7.38 (up to 5th Semester) 
+CEOA Matriculation Higher Secondary School | Madurai, TN | May 2023 
+ 
+TECHNICAL SKILLS 
+ Languages: C++, Java, Python, C 
+ Web Technologies: React, Node.js, Express, JavaScript, HTML5, CSS3 
+ Databases: MySQL, SQLite 
+ Developer Tools: Git, VS Code, Arduino IDE 
+ 
+INTERNSHIPS 
+Four Step solutions – Web designing                  (December 2024- January 2025) 
+Developed strong web designing skills by contributing to real-time projects, improving proficiency in UI/UX, 
+wireframing, and design optimization in a collaborative team setting. 
+ 
+Arutra Solutions - Full stack Development                  (June 2025- July 2025) 
+Acquired practical full-stack development experience, improving coding and debugging skills through 
+teamwork on live projects 
+ 
+AITRA – IoT, Drone & Robotics                  (December 2025- January 2025) 
+Worked on IoT, drone, and robotics projects with sensor integration and automation, developing skills in real-
+time systems, hardware–software interfacing, and team-based problem solving. 
+ 
+PROJECTS 
+Face Recognition Attendance System 
+ Built an automated attendance system using Python, OpenCV, and the face recognition library to eliminate manual tracking. 
+ Engineered a real-time facial recognition pipeline to accurately identify individuals against a pre- populated image database. 
+ Automated the logging of attendance into CSV files, resulting in a 100% reduction in manual entry errors and saving significant administrative time. 
+ 
+TRANS-IT: Real-Time Bus Tracking System 
+ Developed a real-time college bus tracking system using Next.js and Firebase, providing separate 
+portals for students, drivers, and admins. 
+ Implemented live GPS tracking with real-time updates and ETA-based bus monitoring for students. 
+ Integrated a QR code attendance system with trip start/end management and duplicate scan 
+prevention for secure verification. 
+ 
+CERTIFICATIONS 
+ Cloud Computing – FutureLearn | May 2024 
+ Internet of Things – SRM IST Chennai | Mar 2024 
+ Python for Data Science – SRM IST Chennai | Feb 2024 
+ Data Science Foundation – Great Learning | Feb 2024 
+ Placement Preparation – Internshala Trainings | Feb 2024 
+ Python (Basic) – HackerRank | Jan 2024 
+ Java Programming – Great Learning | Oct 2023 
+ LANGUAGES 
+ English (Fluent) 
+ Tamil (Native) 
+ Telugu (Conversational) 
+   INTERESTS 
+ Open-Source Contribution 
+ Competitive Programming 
+ IoT Projects 
+ UI/UX Design 
