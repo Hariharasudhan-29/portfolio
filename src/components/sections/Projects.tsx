@@ -22,6 +22,14 @@ const projects = [
     github: "https://github.com/Hariharasudhan-29",
     demo: "#",
     image: "/project-2.png",
+  },
+  {
+    title: "Personal Portfolio Website",
+    description: "A modern, interactive portfolio deployed on Vercel with Next.js App Router, Framer Motion animations, 3D tilt cards, and dark/light mode.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/Hariharasudhan-29/portfolio",
+    demo: "https://portfolio-smoky-eight-mquqfq3ots.vercel.app",
+    image: "/project-3.png",
   }
 ];
 

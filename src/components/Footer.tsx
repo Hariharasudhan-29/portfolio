@@ -33,15 +33,6 @@ export default function Footer() {
           >
             <Mail className="w-5 h-5" />
           </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-primary-500 hover:text-white transition-all hover:scale-110"
-            aria-label="Instagram"
-          >
-            <FaInstagram className="w-5 h-5" />
-          </a>
         </div>
         
         <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 text-center">
