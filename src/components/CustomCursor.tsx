@@ -6,34 +6,42 @@ import { motion } from "framer-motion";
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [hasPointer, setHasPointer] = useState(false);
 
   useEffect(() => {
-    const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+    // Only run cursor logic on devices with a fine pointer (mouse/trackpad)
+    if (window.matchMedia("(pointer: fine)").matches) {
+      setHasPointer(true);
+      
+      const updateMousePosition = (e: MouseEvent) => {
+        setMousePosition({ x: e.clientX, y: e.clientY });
+      };
 
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (
-        target.tagName.toLowerCase() === "a" ||
-        target.tagName.toLowerCase() === "button" ||
-        target.closest("a") ||
-        target.closest("button")
-      ) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
-    };
+      const handleMouseOver = (e: MouseEvent) => {
+        const target = e.target as HTMLElement;
+        if (
+          target.tagName.toLowerCase() === "a" ||
+          target.tagName.toLowerCase() === "button" ||
+          target.closest("a") ||
+          target.closest("button")
+        ) {
+          setIsHovering(true);
+        } else {
+          setIsHovering(false);
+        }
+      };
 
-    window.addEventListener("mousemove", updateMousePosition);
-    window.addEventListener("mouseover", handleMouseOver);
+      window.addEventListener("mousemove", updateMousePosition);
+      window.addEventListener("mouseover", handleMouseOver);
 
-    return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
-      window.removeEventListener("mouseover", handleMouseOver);
-    };
+      return () => {
+        window.removeEventListener("mousemove", updateMousePosition);
+        window.removeEventListener("mouseover", handleMouseOver);
+      };
+    }
   }, []);
+
+  if (!hasPointer) return null;
 
   // Use a subtle mix-blend-mode or simple colored dot
   return (

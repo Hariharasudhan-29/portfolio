@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
@@ -30,10 +31,26 @@ const projects = [
     github: "https://github.com/Hariharasudhan-29/portfolio",
     demo: "https://portfolio-smoky-eight-mquqfq3ots.vercel.app",
     image: "/project-3.png",
+  },
+  {
+    title: "V Schedule: Timetable Generator",
+    description: "A full-stack academic scheduling platform with an algorithm to auto-generate conflict-free timetables, RBAC, and intelligent substitution logic.",
+    tech: ["React 19", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/Hariharasudhan-29",
+    demo: "#",
+    image: "/project-4.png",
   }
 ];
 
 export default function Projects() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <section id="projects" className="py-24 bg-slate-50 dark:bg-slate-900/50">
       <div className="container mx-auto px-6 md:px-12">
@@ -58,6 +75,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <Tilt
+                tiltEnable={!isMobile}
                 tiltMaxAngleX={10}
                 tiltMaxAngleY={10}
                 scale={1.02}

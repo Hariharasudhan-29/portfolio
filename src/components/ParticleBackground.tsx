@@ -8,15 +8,23 @@ import { useTheme } from "next-themes";
 export default function ParticleBackground() {
   const [init, setInit] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
+    setIsMobile(window.innerWidth < 768);
+    
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });
+    
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (!mounted || !init) return null;
@@ -34,11 +42,11 @@ export default function ParticleBackground() {
             value: "transparent",
           },
         },
-        fpsLimit: 120,
+        fpsLimit: 60, // Reduced from 120 for better performance
         interactivity: {
           events: {
             onHover: {
-              enable: true,
+              enable: !isMobile, // Disable hover interaction on mobile
               mode: "repulse",
             },
           },
@@ -62,13 +70,13 @@ export default function ParticleBackground() {
           },
           move: {
             enable: true,
-            speed: 1,
+            speed: isMobile ? 0.5 : 1, // Slower on mobile
           },
           number: {
             density: {
               enable: true,
             },
-            value: 80,
+            value: isMobile ? 30 : 80, // Dramatically reduced on mobile
           },
           opacity: {
             value: isDark ? 0.3 : 0.5,
