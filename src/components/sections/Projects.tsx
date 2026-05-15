@@ -29,7 +29,7 @@ const projects = [
     description: "A modern, interactive portfolio deployed on Vercel with Next.js App Router, Framer Motion animations, 3D tilt cards, and dark/light mode.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/Hariharasudhan-29/portfolio",
-    demo: "https://portfolio-smoky-eight-mquqfq3ots.vercel.app",
+    demo: "https://portfolio-hariharasudhan.vercel.app",
     image: "/project-3.png",
   },
   {
@@ -100,11 +100,11 @@ export default function Projects() {
                     )}
                   </div>
                 </div>
-                
+
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-primary-500 transition-colors">{project.title}</h3>
                   <p className="text-slate-600 dark:text-slate-400 mb-4 text-sm flex-grow">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                     {project.tech.map((t) => (
                       <span key={t} className="text-xs font-medium px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-600 rounded-md border border-primary-200 dark:border-primary-800/30">
